@@ -2,9 +2,9 @@
 
 ## Prerequisites
 
-- Node.js (recommended: >= 16.x)
+- Node.js (recommended: >= 16.x) (https://nodejs.org/en/download)
 - npm (Node Package Manager, usually included with Node.js)
-- PHP (for the frontend, recommended: >= 7.4)
+- PHP (for the frontend, recommended: >= 7.4) (https://windows.php.net/download/)
 
 ## Installation (Step by Step)
 

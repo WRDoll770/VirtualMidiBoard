@@ -1,0 +1,8 @@
+Mischpult.png
+.DS_Store
+node_modules/
+midi-output-state.json
+.env
+npm-debug.log
+.vscode/
+Dockerfile

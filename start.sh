@@ -3,6 +3,7 @@
 yaml_port() {
 	grep "^$1:" config.yaml | awk '{print $2}'
 }
+
 BACKEND_PORT=$(yaml_port backend_port)
 FRONTEND_PORT=$(yaml_port frontend_port)
 

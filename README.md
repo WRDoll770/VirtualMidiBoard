@@ -32,15 +32,32 @@
 
    There are two options:
 
-   **a) Using start.sh (recommended)**
+   **a) Using start.sh (recommended for Mac)**
 
    The script starts backend and frontend automatically in separate terminals:
 
    ```bash
    ./start.sh
    ```
+   
+   **b) Using start.sh (recommended for Windows)**
 
-   **b) Manually (if preferred)**
+   The script starts backend and frontend automatically in separate terminals:
+
+   ```bash
+   ./start.bat
+   ```
+
+   **c) Using start.sh (recommended for Linux)**
+
+   The script starts backend and frontend automatically in separate terminals:
+
+   ```bash
+   chmod +x start.sh
+   ./start.sh
+   ```
+   
+   **d) Manually (if preferred)**
 
    - Backend:
      ```bash
@@ -115,6 +132,23 @@
    Das Skript startet Backend und Frontend automatisch in separaten Terminals:
 
    ```bash
+   ./start.sh
+   ```
+
+   **b) Mit start.sh (empfohlen)**
+
+   Das Skript startet Backend und Frontend automatisch in separaten Terminals:
+
+   ```bash
+   ./start.bat
+   ```
+
+   **c) Mit start.sh (empfohlen)**
+
+   Das Skript startet Backend und Frontend automatisch in separaten Terminals:
+
+   ```bash
+   chmod +x start.sh
    ./start.sh
    ```
 

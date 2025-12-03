@@ -465,13 +465,20 @@ function createButton(idx) {
   let wasBlinking = false;
   let wasActive = false;
   let isMouseDown = false;
+  let pressTime = 0;
+  let noteOffTimeout = null;
   btn.onmousedown = () => {
     isMouseDown = true;
     wasBlinking = !!buttonBlinkIntervals[idx];
     wasActive = btn.classList.contains('active');
     btn.classList.add('active');
     sendButton(idx, 127);
+    pressTime = Date.now();
     if (wasBlinking) stopButtonBlink(idx);
+    if (noteOffTimeout) {
+      clearTimeout(noteOffTimeout);
+      noteOffTimeout = null;
+    }
   };
   function restoreButtonState() {
     if (wasBlinking) {
@@ -484,16 +491,32 @@ function createButton(idx) {
       btn.classList.remove('active');
     }
   }
+  function sendButtonNoteOffDelayed(idx) {
+    const note = getButtonMidi(idx);
+    if (!note) return;
+    ws.send(JSON.stringify({ type: 'midiOut', bytes: [0x90 | MIDI_CHANNEL, note, 0] }));
+  }
+  function handleButtonRelease() {
+    restoreButtonState();
+    const releaseTime = Date.now();
+    const elapsed = releaseTime - pressTime;
+    if (elapsed >= 200) {
+      sendButton(idx, 0);
+    } else {
+      noteOffTimeout = setTimeout(() => {
+        sendButton(idx, 0);
+        noteOffTimeout = null;
+      }, 200 - elapsed);
+    }
+  }
   btn.onmouseup = () => {
     isMouseDown = false;
-    sendButton(idx, 0);
-    restoreButtonState();
+    handleButtonRelease();
   };
   btn.onmouseleave = () => {
     if (isMouseDown) {
       isMouseDown = false;
-      sendButton(idx, 0);
-      restoreButtonState();
+      handleButtonRelease();
     }
   };
   return btn;
@@ -545,6 +568,8 @@ function sendFader(idx, value) {
   const cc = getFaderMidi(idx);
   if (!cc) return;
   ws.send(JSON.stringify({ type: 'midiOut', bytes: [0xB0 | MIDI_CHANNEL, cc, parseInt(value)] }));
+  ws.send(JSON.stringify({ type: 'midiOut', bytes: [0x9F, 0x7E, 0x7F] }));//sync für showcockpit um fader zu aktualisieren
+  ws.send(JSON.stringify({ type: 'midiOut', bytes: [0x9F, 0x7E, 0x00] }));
 }
 
 function sendEncoder(idx, value) {

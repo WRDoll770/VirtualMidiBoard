@@ -99,9 +99,9 @@
 
 ## Voraussetzungen
 
-- Node.js (empfohlen: >= 16.x)
+- Node.js (empfohlen: >= 16.x) (https://nodejs.org/en/download)
 - npm (Node Package Manager, meist mit Node.js installiert)
-- PHP (für das Frontend, empfohlen: >= 7.4)
+- PHP (für das Frontend, empfohlen: >= 7.4) (https://windows.php.net/download/)
 
 ## Installation (Schritt für Schritt)
 

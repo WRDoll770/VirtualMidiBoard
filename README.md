@@ -6,7 +6,20 @@
 
 - Node.js (recommended: >= 16.x) (https://nodejs.org/en/download)
 - npm (Node Package Manager, usually included with Node.js)
-- PHP (for the frontend, recommended: >= 7.4) (https://windows.php.net/download/)
+- PHP (for the frontend, recommended: >= 7.4) 
+   **a) On Windows**
+   (https://windows.php.net/download/)
+
+   **b) On MacOS**
+   ```bash
+   brew install php
+   ```
+
+   **c) On Linux**
+   ```bash
+   sudo apt update
+   sudo apt install php
+   ```
 
 ## Installation (Step by Step)
 
@@ -101,7 +114,20 @@
 
 - Node.js (empfohlen: >= 16.x) (https://nodejs.org/en/download)
 - npm (Node Package Manager, meist mit Node.js installiert)
-- PHP (für das Frontend, empfohlen: >= 7.4) (https://windows.php.net/download/)
+- PHP (für das Frontend, empfohlen: >= 7.4) 
+   **a) Auf Windows**
+   (https://windows.php.net/download/)
+
+   **b) Auf MacOS**
+   ```bash
+   brew install php
+   ```
+
+   **c) Auf Linux**
+   ```bash
+   sudo apt update
+   sudo apt install php
+   ```
 
 ## Installation (Schritt für Schritt)
 

@@ -1,3 +1,5 @@
+# VirtualMidiBoard – Setup & Usage Guide
+
 # English Version
 
 ## Prerequisites
@@ -92,7 +94,8 @@
 ---
 
 **Good luck with VirtualMidiBoard!**
-# VirtualMidiBoard – Setup & Usage Guide
+
+# Deutsche Version
 
 ## Voraussetzungen
 

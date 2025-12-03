@@ -6,7 +6,8 @@
 
 - Node.js (recommended: >= 16.x) (https://nodejs.org/en/download)
 - npm (Node Package Manager, usually included with Node.js)
-- PHP (for the frontend, recommended: >= 7.4) 
+- PHP (for the frontend, recommended: >= 7.4)
+  
    **a) On Windows**
    (https://windows.php.net/download/)
 
@@ -114,7 +115,8 @@
 
 - Node.js (empfohlen: >= 16.x) (https://nodejs.org/en/download)
 - npm (Node Package Manager, meist mit Node.js installiert)
-- PHP (für das Frontend, empfohlen: >= 7.4) 
+- PHP (für das Frontend, empfohlen: >= 7.4)
+  
    **a) Auf Windows**
    (https://windows.php.net/download/)
 

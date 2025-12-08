@@ -10,7 +10,7 @@ function getConfig() {
     return config;
   } catch (e) {
     console.error('Fehler beim Laden der config.yaml:', e);
-    return { backend_port: 8080, frontend_port: 4040 };
+    return { backend_port: 8181, frontend_port: 4040 };
   }
 }
 

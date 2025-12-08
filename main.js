@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
   fetch('config.json')
     .then(r => r.json())
     .then(cfg => {
-      const port = cfg.backend_port || 8080;
+      const port = cfg.backend_port || 8181;
       ws = new WebSocket('ws://' + wsHost + ':' + port);
       ws.onopen = () => {
         // Nach State fragen

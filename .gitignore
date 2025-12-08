@@ -6,3 +6,4 @@ midi-output-state.json
 npm-debug.log
 .vscode/
 Dockerfile
+test.lua

@@ -229,4 +229,4 @@ wss.on('connection', ws => {
 });
 
 
-console.log('MIDI-Backend läuft auf Port 8181');
+console.log(`MIDI-Backend läuft auf Port ${config.backend_port}`);

@@ -1,6 +1,6 @@
 # VirtualMidiBoard – Setup & Usage Guide
 
-# English Version
+# English Version - German below
 
 ## Prerequisites
 
